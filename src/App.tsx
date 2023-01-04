@@ -2,6 +2,7 @@ import { useState } from "react";
 import styles from "./App.module.css";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
+import Modal from "./components/Modal";
 import TaskForm from "./components/TaskForm";
 import TaskList from "./components/TaskList";
 
@@ -20,6 +21,9 @@ function App() {
 
   return (
     <div className="App">
+      <Modal
+        children={<TaskForm btnText="Editar Tarefa" taskList={taskList} />}
+      />
       <Header />
       <main className={styles.main}>
         <div>
